@@ -1,17 +1,29 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom';
+import {Helmet} from 'react-helmet';
+
+import Countdown from './countdown.js';
+import Background from './background.js';
+
 import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+function Index() {
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+    useEffect( () => {
+
+    })
+
+    return (
+        <div id="app">
+            <Helmet>
+                <title>SpaceX Countdown</title>
+                <script async src="https://www.googletagmanager.com/gtag/js?id=G-JLNNQKB16Z"></script>
+                <script src="/analytics.js"></script>
+            </Helmet>
+            <Countdown/>
+            <Background/>
+        </div>
+    );
+}
+
+ReactDOM.render(<Index/>, document.getElementById('root'));

@@ -1,13 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    /*font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif; */
+    font-family: 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: white;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+body {
+  background: #000;
+}
+
+#root {
+  height: 100vh;
+  width: 100vw;
+  
+}
+
+#background {
+  overflow: hidden;
+  position: fixed;
+  z-index: -1;
+  height: 100vh;
+  width: 100vw;
+  opacity: 0.8;
+}
+
+#player {
+  opacity: 0;
+}
+
+#mission-patch {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: blur(5px);
+  opacity: 0;
+  background-position: center;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity:inherit;
+  }
+  100% {
+    opacity:0;
+  }
+}
+@keyframes fadeIn80 {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:0.8;
+  }
+}
+@keyframes fadeIn50 {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:0.5;
+  }
+}
+
+#player.fadeIn {
+  animation: fadeIn80 ease-in 5s;
+  animation-fill-mode: forwards;
+}
+
+#mission-patch.fadeIn {
+  animation: fadeIn50 ease-in 5s;
+  animation-fill-mode: forwards;
+}
+
+#background div iframe {
+  height: 100vh;
+  box-sizing: border-box;
+  height: 56.25vw;
+  left: 50%;
+  min-height: 100%;
+  min-width: 100%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  width: 177.77777778vh;
+}
+
+#app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#countdown {
+  align-self: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  width: 50%;
+  text-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+
+}
+
+#spacex {
+  align-self: auto;
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+
+#timer {
+  align-self: center;
+  animation: fadeIn ease-out 2s;
+  margin: 0 auto;
+  margin-bottom: 2.6vh;
+}
+
+#timer h2 {
+  align-self: auto;
+	display: inline-block;
+  position: relative;
+  text-align: center;
+  padding: 0 1.8vw;
+  font-size: 8vw;
+  font-weight: 100;
+}
+
+#timer h2 span {
+  position: absolute;
+  margin: 0 auto;
+  bottom: -20px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  margin-left: 4px;
+  opacity: 0.8;
+  font-weight: 500;
+  font-size: 1.5vw;
+}
+
+#mission {
+  align-self: flex-start;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+#mission h1 {
+  animation-delay: 2s;
+  animation: fadeIn ease-out 10s;
+  font-size: 1.8vw;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-shadow: 0px 4px 20px rgba(0,0,0,0.1);
+
+}
+
+#details {
+  display: block;
+  width: 100%;
+  animation-delay: 5s;
+  animation: fadeIn ease-out 20s;
+}
+
+.text-small {
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 1.6em;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+@media only screen and (max-width: 800px) {
+
+  #countdown {
+    width: 90%;
+  }
+  #timer {
+    margin-bottom: 2vh;
+  }
+  #timer h2 {
+    font-size: 15vw;
+    padding: 0 3vw;
+  }
+  #timer h2 span {
+    font-size: 1.5vh;
+  }
+  #mission h1 {
+    font-size: 3.8vw;
+  }
+
+}
+
