@@ -1,8 +1,8 @@
-# SpaceX Countdown
-A countdown clock to the next SpaceX mission. It pulls in the data from the [Reddit SpaceX API](https://github.com/r-spacex/SpaceX-API) and automatically updates the countdown on load to the next mission launch time. The background is NASA Earth views originally sourced from [NASA.com](https://www.nasa.gov/content/ultra-high-definition-video-gallery) uploaded to [YouTube here](https://www.youtube.com/watch?v=7fYKMCCPh28). 
+![](public/thumbnail.png)
+View it live here: http://spacex-countdown.s3-website-us-east-1.amazonaws.com
 
-## See it live!
-[spacex-countdown.s3-website-us-east-1.amazonaws.com](http://spacex-countdown.s3-website-us-east-1.amazonaws.com/) or use the short URL here [go.aws/36C1usc](https://go.aws/36C1usc)
+# SpaceX Countdown
+A SpaceX mission countdown clock [running 24/7](https://go.aws/36C1usc) always counting down to the next SpaceX mission. It pulls data from the [Reddit SpaceX API](https://github.com/r-spacex/SpaceX-API) and automatically updates the countdown on load to the next mission launch time. The background is NASA Earth views originally sourced from [NASA.com](https://www.nasa.gov/content/ultra-high-definition-video-gallery) uploaded to [YouTube here](https://www.youtube.com/watch?v=7fYKMCCPh28). 
 
 ## TODO
 * Make the video in the background loop. Right now it doesn't. It just runs for ≈1h30m
