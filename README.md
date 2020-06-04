@@ -1,4 +1,4 @@
-![](public/thumbnail.png)
+![](public/thumbnail.jpg)
 View it live here: http://spacex-countdown.s3-website-us-east-1.amazonaws.com
 
 # SpaceX Countdown
